@@ -1,0 +1,56 @@
+{
+  "name": "fivem_cleaner",
+  "version": "1.0.0",
+  "description": "FiveM Log Cleaner",
+  "main": "src/main.js",
+  "scripts": {
+    "start": "webpack && electron .",
+    "build": "webpack --mode=production && electron-builder",
+    "watch": "webpack --watch"
+  },
+  "keywords": [],
+  "author": "logandelmairedev",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.26.8",
+    "@babel/preset-env": "^7.26.8",
+    "@babel/preset-react": "^7.26.3",
+    "babel-loader": "^9.2.1",
+    "copy-webpack-plugin": "^12.0.2",
+    "electron": "^34.1.1",
+    "electron-builder": "^24.9.1",
+    "webpack": "^5.97.1",
+    "webpack-cli": "^6.0.1"
+  },
+  "build": {
+    "appId": "logandelmairedev.com.fivemcleaner",
+    "productName": "FiveM Log Cleaner",
+    "win": {
+      "target": "nsis",
+      "icon": "assets/fivem-icon.ico"
+    },
+    "nsis": {
+      "oneClick": true,
+      "installerIcon": "assets/fivem-icon.ico",
+      "uninstallerIcon": "assets/fivem-icon.ico",
+      "uninstallDisplayName": "FiveM Log Cleaner",
+      "allowToChangeInstallationDirectory": false,
+      "createDesktopShortcut": true
+    },
+    "files": [
+      "build/**/*",
+      "src/app.js",
+      "src/home.jsx",
+      "src/index.html",
+      "src/index.js",
+      "src/main.js",
+      "src/preload.js",
+      "src/translation.js",
+      "assets/**/*"
+    ]
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  }
+}
