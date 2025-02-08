@@ -50,9 +50,7 @@ npm run build
 
 ## Author
 
-- **logandelmairedev** - [Website](https://
-logandelmairedev.com/)
-
+- **logandelmairedev** - [Website](https://logandelmairedev.com/)
 ## License
 
 This project is under the ISC license - see the file [LICENSE](LICENSE) 
